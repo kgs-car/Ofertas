@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listar Membros</title>
+</head>
+<body>
+    <h2>Lista de Membros</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <!-- outras colunas conforme necessário -->
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="fiel : ${fieis}">
+                <td th:text="${fiel.id}"></td>
+                <td th:text="${fiel.nome}"></td>
+                <!-- outras colunas conforme necessário -->
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

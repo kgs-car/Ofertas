@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listar Contribuições</title>
+</head>
+<body>
+    <h2>Lista de Contribuições</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Valor</th>
+                <th>Data</th>
+                <th>Fiel</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="contribuicao : ${contribuicoes}">
+                <td th:text="${contribuicao.id}"></td>
+                <td th:text="${contribuicao.valor}"></td>
+                <td th:text="${contribuicao.data}"></td>
+                <td th:text="${contribuicao.fiel.nome}"></td>
+                
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
+
